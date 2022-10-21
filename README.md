@@ -4,9 +4,11 @@ astrods provides a collection of ready-to-use datasets in Astronomy for use with
 # data availability
 The current datasets available are:
 
-| Name					| reference				| size 		| splits 					|
-| --------------------- | --------------------- | --------- | -------------------------	|
-| XCLASS 				| Kosiba et al. (2020)  | 259.3 MB	| ('train', 'test')			|
+| Name					        | reference				        | size 		| splits 			                |
+| --------------------- | --------------------- | --------- | ---------------------------	|
+| XCLASS 				        | Kosiba et al. (2020)  | 259.3 MB	| ('train', 'test')		       	|
+| galaxyMNIST           | Walmsley et al (2022) | 1.13 GB   | ('train', 'test')           |
+
 
 
 
