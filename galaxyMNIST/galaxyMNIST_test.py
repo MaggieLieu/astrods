@@ -4,10 +4,10 @@ import tensorflow_datasets as tfds
 from . import galaxyMNIST
 
 
-class GalaxymnistTest(tfds.testing.DatasetBuilderTestCase):
+class GalaxymnistHrTest(tfds.testing.DatasetBuilderTestCase):
   """Tests for galaxyMNIST dataset."""
-  # TODO(galaxyMNIST):
-  DATASET_CLASS = galaxyMNIST.galaxyMNIST
+  # TODO(galaxyMNIST_HR):
+  DATASET_CLASS = galaxyMNIST_HR.galaxyMNIST
   SPLITS = {
       'train': 3,  # Number of fake train example
       'test': 1,  # Number of fake test example

@@ -1,3 +1,3 @@
 """galaxyMNIST dataset."""
 
-from .galaxyMNIST import galaxyMNIST
+from .galaxyMNIST_HR import galaxyMNIST

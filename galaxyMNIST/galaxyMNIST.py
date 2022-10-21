@@ -4,13 +4,13 @@ import tensorflow_datasets as tfds
 import h5py
 
 _DESCRIPTION = """
-GalaxyMNIST <https://github.com/mwalmsley/galaxy_mnist>`_ pytorch Dataset.
+High resolution GalaxyMNIST <https://github.com/mwalmsley/galaxy_mnist>`_ pytorch Dataset.
 
 Based on MNIST/fashionMNIST datasets.
 
 Galaxy images labelled by morphology (shape). Aimed at ML debugging and teaching.
 
-Contains 10,000 images of galaxies (either 3x64x64 or 3x224x224), confidently labelled by Galaxy Zoo volunteers as belonging to one of four morphology classes.
+Contains 10,000 images of galaxies (3x224x224), confidently labelled by Galaxy Zoo volunteers as belonging to one of four morphology classes.
 """
 
 _CITATION = """
@@ -50,7 +50,7 @@ class galaxyMNIST(tfds.core.GeneratorBasedBuilder):
         builder=self,
         description=_DESCRIPTION,
         features=tfds.features.FeaturesDict({
-            'image': tfds.features.Image(shape=(64, 64, 3)),
+            'image': tfds.features.Image(shape=(224, 224, 3)),
             'label': tfds.features.ClassLabel(names=['smooth & round', 'smooth & cigar-shaped', 'edge-on-disk', 'unbarred spiral']),
         }),
         supervised_keys=('image', 'label'),
@@ -60,8 +60,8 @@ class galaxyMNIST(tfds.core.GeneratorBasedBuilder):
 
   def _split_generators(self, dl_manager: tfds.download.DownloadManager):
     """Returns SplitGenerators."""
-    path_train = dl_manager.download_and_extract('https://dl.dropboxusercontent.com/s/5a14de0o7slyif9/train_dataset.hdf5.gz')
-    path_test = dl_manager.download_and_extract('https://dl.dropboxusercontent.com/s/5rza12nn24cwd2k/test_dataset.hdf5.gz')
+    path_train = dl_manager.download_and_extract('https://dl.dropboxusercontent.com/s/xenuo0ekgyi10ru/train_dataset.hdf5.gz')
+    path_test = dl_manager.download_and_extract('https://dl.dropboxusercontent.com/s/lczri4sb4bbcgyh/test_dataset.hdf5.gz')
 
     return {
         'train': self._generate_examples(path_train),
