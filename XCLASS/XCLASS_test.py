@@ -7,7 +7,7 @@ from . import XCLASS
 class XclassTest(tfds.testing.DatasetBuilderTestCase):
   """Tests for XCLASS dataset."""
   # TODO(XCLASS):
-  DATASET_CLASS = XCLASS.Xclass
+  DATASET_CLASS = XCLASS.XCLASS
   SPLITS = {
       'train': 3,  # Number of fake train example
       'test': 1,  # Number of fake test example
