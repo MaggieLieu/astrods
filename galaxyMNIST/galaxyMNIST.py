@@ -50,7 +50,7 @@ class galaxyMNIST(tfds.core.GeneratorBasedBuilder):
         builder=self,
         description=_DESCRIPTION,
         features=tfds.features.FeaturesDict({
-            'image': tfds.features.Image(shape=(224, 224, 3)),
+            'image': tfds.features.Image(shape=(64, 64, 3)),
             'label': tfds.features.ClassLabel(names=['smooth & round', 'smooth & cigar-shaped', 'edge-on-disk', 'unbarred spiral']),
         }),
         supervised_keys=('image', 'label'),
