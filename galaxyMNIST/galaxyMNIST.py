@@ -61,7 +61,7 @@ class galaxyMNIST(tfds.core.GeneratorBasedBuilder):
   def _split_generators(self, dl_manager: tfds.download.DownloadManager):
     """Returns SplitGenerators."""
     path_train = dl_manager.download_and_extract('https://drive.google.com/uc?export=download&id=1MsK2lWOTJOk1P7rvXkOdFbyYXkuSDYcf')
-    path_test = dl_manager.download_and_extract('https://dl.dropboxusercontent.com/s/lczri4sb4bbcgyh/test_dataset.hdf5.gz')
+    path_test = dl_manager.download_and_extract('https://drive.google.com/uc?export=download&id=1YxyH58ClJ52y8-KGQZWcV6sCDnHsCx8B')
 
     return {
         'train': self._generate_examples(path_train),
